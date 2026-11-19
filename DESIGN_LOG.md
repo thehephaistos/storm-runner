@@ -141,6 +141,20 @@ See it in the build: get caught, then press any key. A new run starts at once.
 - itch.io build (live): https://oguzk.itch.io/storm-runner (uploaded 2026-11-20)
 - Played one full run in the browser on itch.io until the storm caught me (CAUGHT screen). The game loaded and ran in the page, and the burst icon was easy to see under the runner. The portrait game shows as a narrow strip with black bars in the 1280 × 720 box. Visibility is Restricted with a password, which is shared with reviewers privately and not stored here.
 
+### Release note: itch.io browser build (2026-11-20)
+
+- **Build:** Godot 4.7.2 Web export with the `Web` preset. Thread Support is off, `index.html` sits at the root of `build/web`, and the game still runs at 60 physics ticks per second, the same as the desktop build.
+- **Upload:** `butler push build/web oguzk/storm-runner:html5`. The key was read from `BUTLER_API_KEY` at push time only and isn't stored in any file, the log or the repo.
+- **Page:** kind HTML, "This file will be played in the browser" ticked, viewport 1280 × 720, Restricted with a password shared privately with reviewers.
+- **Browser check (Chrome, console open):**
+  - The runner was moving about 1 s after opening the link.
+  - **0 red console errors.** The 3 yellow warnings come from itch.io's own page script (`lib.min.js`), not from the game.
+  - Restart from CAUGHT worked without reloading the page: one engine start-up line, three runs.
+  - The last run ended CAUGHT at 205.
+  - Tick 600 came at 9.99 s and 10.00 s of real time on the restarted runs (11.46 s on the first, which includes start-up), so the browser held 60 ticks per second.
+
+![Storm Runner on itch.io, CAUGHT at 205, with the browser console open](docs/itch-browser-run.png)
+
 ---
 
 ## Changed after playing
