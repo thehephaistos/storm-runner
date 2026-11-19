@@ -1,6 +1,6 @@
 # Storm Runner
 
-Godot 4.7 project. Design: `design_calls.md` (prompt: `prompt.md`). Game: `scenes/main.tscn` + `scripts/main.gd`, every number in `scripts/tuning.gd`, build notes in `DESIGN_LOG.md` (prompts: `prompts/loop.md`, `prompts/game.md`).
+Godot 4.7 project. Design: `design_calls.md` (prompt: `prompt.md`). Game: `scenes/main.tscn` + `scripts/main.gd`, every number in `scripts/tuning.gd`, build notes in `DESIGN_LOG.md` (prompts: `prompts/loop.md`, `prompts/game.md`, `prompts/release.md`).
 
 **Play:** open in Godot 4.7 and press F5. Left/Right change lane, Up bursts (swipes on touch). Any key restarts.
 
