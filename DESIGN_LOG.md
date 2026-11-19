@@ -139,7 +139,7 @@ Steady-speed check: the lock counts ticks.
 See it in the build: get caught, then press any key. A new run starts at once.
 
 - itch.io build (live): https://oguzk.itch.io/storm-runner (uploaded 2026-11-20)
-- Played in the browser on itch.io: the game loaded and ran in the page, and the burst icon was easy to see under the runner. The portrait game shows as a narrow strip with black bars in the 1280 × 720 box. Visibility is Restricted with a password, which is shared with reviewers privately and not stored here.
+- Played one full run in the browser on itch.io until the storm caught me (CAUGHT screen). The game loaded and ran in the page, and the burst icon was easy to see under the runner. The portrait game shows as a narrow strip with black bars in the 1280 × 720 box. Visibility is Restricted with a password, which is shared with reviewers privately and not stored here.
 
 ---
 
