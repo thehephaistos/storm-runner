@@ -57,7 +57,7 @@ Players can't see metres or m/s, so the checks use what is on screen: the wall, 
 
 - **Call:** The burst (Up arrow, or swipe up on a phone) works from the first frame, and its icon, marked with an up arrow, pulses the first time in each run that the screen edges start to darken.
 - **Why:** "...and find the burst when they need it."
-- **Check:** Press Up the moment a run starts and the runner bursts. Then hit debris on purpose until the edges start to darken. The burst icon pulses at that moment.
+- **Check:** Press Up on the first frame of a run and the runner bursts. Then play on normally without bursting again. Before the wall reaches you, the edges start to darken, and the burst icon pulses at that moment.
 - **Numbers:** none.
 
 ## 8. The burst is a decision, not a spam button
@@ -100,5 +100,6 @@ Players can't see metres or m/s, so the checks use what is on screen: the wall, 
 1. **The storm falls back in the opening (call 5).** With every mix of the ranges, the storm is slower than the runner for the whole first 10 s (the fastest storm is about 6.4 m/s at 10 s; the slowest runner is 7 m/s). The gap grows by about 8–38 m instead of shrinking. At middle values it goes from 25 m to about 48 m.
 2. **A run that never bursts still escapes (call 4).** With no hits and no bursts, the gap at 90 s is the starting gap + 90 × (runner speed − the storm's average speed). At middle values that is about +81 m. The call only holds when the runner is at the slow end (7–7.7 m/s) and the storm is at the fast end of both its ranges. This also undercuts "two hits late in the run should be deadly": one hit costs only about 3–6 m.
 3. **The wall is hard to keep on screen (call 3).** At middle values the gap peaks at about 100 m around 60 s, before any bursts. Bursting whenever ready adds about 95–230 m more over a run. A phone screen can't show a wall that far back and still show the debris ahead clearly.
+4. **The burst may never show itself (call 7).** The pulse waits for the edges to darken. At middle values, a player who dodges everything never has the storm closer than it was at the start (25 m), so unless the edges already darken at that distance, the pulse only fires for players who hit a lot of debris.
 
-Starting the storm at or above runner speed would fix all three, but then bursts carry the whole run, so these numbers need to be tuned together in DESIGN_LOG.md.
+Starting the storm at or above runner speed would fix all four, but then bursts carry the whole run, so these numbers need to be tuned together in DESIGN_LOG.md.
