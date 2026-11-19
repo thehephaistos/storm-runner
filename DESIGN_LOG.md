@@ -145,3 +145,4 @@ See it in the build: get caught, then press any key. A new run starts at once.
 - Lane changes felt quick and clear. I changed nothing.
 - I didn't see the burst icon. It sat in the bottom-right corner on top of the storm wall, while my eyes stayed on the runner near the top. Changed: the icon now sits just below the runner and moves with it, and its pulse grows twice as much (up to 40%).
 - Spotted in a screenshot while fixing the icon: the score at the top center covered the debris coming toward the runner. Changed: the score moved to the top-left corner.
+- Played again after the change: the burst icon under the runner was easy to see, and the run felt much better.
