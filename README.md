@@ -10,7 +10,7 @@ Godot 4.7 project. Design: `design_calls.md` (prompt: `prompt.md`). Game: `scene
 
 - **Update rate: 60 ticks per second** (`physics/common/physics_ticks_per_second = 60`). The 30 and 60 in QA's sheet are screen caps (`max_fps`), not update rates. At a 60 cap the game runs 1 tick per frame; at a 30 cap, 2 ticks per frame. Either way it's 60 ticks a second, so distances match. 60 divides evenly into both caps (no stutter) and gives 17 ms input steps for the lane snap.
 - **Movement lives in `_physics_process(delta)` only.** Nothing that moves is in `_process()`.
-- **Speeds (placeholders, middle of Dev's ranges, until DESIGN_LOG.md fixes them):**
+- **Speeds in the playable build (all values and reasons in DESIGN_LOG.md):**
 
 | Stand-in | Design call | Value | Dev's range |
 |---|---|---|---|

@@ -10,7 +10,7 @@ func _draw() -> void:
 	var c := size * 0.5
 	var r := minf(size.x, size.y) * 0.5
 	if pulse_ticks > 0:
-		r *= 1.0 + 0.18 * absf(sin(pulse_ticks * 0.2))
+		r *= 1.0 + 0.4 * absf(sin(pulse_ticks * 0.2))
 	var is_full := charge >= 1.0
 	var col := Color(1, 0.85, 0.3) if is_full else Color(0.6, 0.6, 0.6)
 	draw_circle(c, r, Color(0, 0, 0, 0.45))

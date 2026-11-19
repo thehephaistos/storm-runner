@@ -15,7 +15,8 @@ enum State { RUNNING, CAUGHT, SAFE }
 @onready var ground: Node2D = $Ground
 @onready var vignette: ColorRect = $Vignette/Rect
 @onready var score_label: Label = $Hud/Score
-@onready var burst_icon: Control = $Hud/BurstIcon
+@onready var burst_icon: Control = $Player/BurstIcon
+@onready var body: ColorRect = $Player/Body
 @onready var end_layer: CanvasLayer = $End
 @onready var end_label: Label = $End/Label
 
@@ -230,7 +231,7 @@ func _update_view() -> void:
 	var py := -player_d * wu
 	var k := 1.0 - float(snap_left) / T.LANE_SNAP_TICKS
 	player.position = Vector2(lerpf(_snap_from_x, lane_x(lane), k), py)
-	player.modulate = Color(1, 0.45, 0.45) if slow_left > 0 else (Color(1.6, 1.6, 1.6) if burst_left > 0 else Color.WHITE)
+	body.modulate = Color(1, 0.45, 0.45) if slow_left > 0 else (Color(1.6, 1.6, 1.6) if burst_left > 0 else Color.WHITE)
 	camera.position = Vector2(T.VIEW_CENTER_X, py + T.CAMERA_AHEAD_PX)
 	# DC3: the wall never leaves the screen; its edge is held at the bottom if it falls further back.
 	var bottom := camera.position.y + T.VIEW_HEIGHT_PX * 0.5 - T.WALL_MIN_VISIBLE_PX

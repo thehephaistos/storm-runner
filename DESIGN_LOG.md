@@ -78,8 +78,8 @@ Up or swipe up bursts from the first frame; the up-arrow icon pulses the first t
 Status: built
 
 Build note
-Built in: `burst_icon.gd` draws the arrow, refill ring and pulse; `main.gd` sets pulse_left once per run when the gap first drops below 15 m.
-Values used: pulse lasts 90 ticks (1.5 s).
+Built in: `burst_icon.gd` draws the arrow, refill ring and pulse; `main.tscn` places the icon just below the runner so it follows every lane change (moved there after playing, see below); `main.gd` sets pulse_left once per run when the gap first drops below 15 m.
+Values used: icon 76 px wide, 36 px below the runner; pulse grows it up to 40% for 90 ticks (1.5 s).
 Steady-speed check: the pulse counts ticks.
 See it in the build: press Up at once and the runner bursts. Play on without bursting; before you're caught the edges darken and the icon pulses.
 
@@ -142,4 +142,6 @@ See it in the build: get caught, then press any key. A new run starts at once.
 
 ## Changed after playing
 
--
+- Lane changes felt quick and clear. I changed nothing.
+- I didn't see the burst icon. It sat in the bottom-right corner on top of the storm wall, while my eyes stayed on the runner near the top. Changed: the icon now sits just below the runner and moves with it, and its pulse grows twice as much (up to 40%).
+- Spotted in a screenshot while fixing the icon: the score at the top center covered the debris coming toward the runner. Changed: the score moved to the top-left corner.
