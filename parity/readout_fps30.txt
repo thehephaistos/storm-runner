@@ -1,1 +1,2 @@
-PARITY fps_cap=30 physics_ticks_per_second=60 ticks=600 run_time_s=10.000 player_distance=1280.00 storm_distance=913.33 wall_clock_s=9.93 frames=299
+PARITY fps_cap=30 physics_ticks_per_second=60 ticks=600 run_time_s=10.000 player_distance=740.00 storm_distance=858.33 wall_clock_s=9.90 frames=296
+errors_in_output=0
