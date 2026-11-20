@@ -145,15 +145,21 @@ See it in the build: get caught, then press any key. A new run starts at once.
 
 - **Build:** Godot 4.7.2 Web export with the `Web` preset. Thread Support is off, `index.html` sits at the root of `build/web`, and the game still runs at 60 physics ticks per second, the same as the desktop build.
 - **Upload:** `butler push build/web oguzk/storm-runner:html5`. The key was read from `BUTLER_API_KEY` at push time only and isn't stored in any file, the log or the repo.
-- **Page:** kind HTML, "This file will be played in the browser" ticked, viewport 1280 × 720, Restricted with a password shared privately with reviewers.
+- **Page:** kind HTML, "This file will be played in the browser" ticked, Fullscreen button on, Restricted with a password shared privately with reviewers.
+- **Viewport, a deliberate change from the release sheet:** the sheet fixes 1280 × 720, but Storm Runner is a portrait game (540 × 960), so 1280 × 720 showed it as a thin strip between black bars. The embed is now a portrait 9:16 size, so reviewers see the game filling the box. The game scales to any 9:16 box, so no new export or upload was needed.
 - **Browser check (Chrome, console open):**
   - The runner was moving about 1 s after opening the link.
-  - **0 red console errors.** The 3 yellow warnings come from itch.io's own page script (`lib.min.js`), not from the game.
+  - No red messages in the console list. The 3 yellow warnings come from itch.io's own page script (`lib.min.js`), not from the game.
+  - **Still to confirm:** in the second check, the DevTools toolbar counted 1 error (✖ 1, also listed under "2 issues") that doesn't appear in the message list. Its source isn't known yet, so the sheet's `console_errors = 0` isn't confirmed.
   - Restart from CAUGHT worked without reloading the page: one engine start-up line, three runs.
   - The last run ended CAUGHT at 205.
   - Tick 600 came at 9.99 s and 10.00 s of real time on the restarted runs (11.46 s on the first, which includes start-up), so the browser held 60 ticks per second.
 
 ![Storm Runner on itch.io, CAUGHT at 205, with the browser console open](docs/itch-browser-run.png)
+
+After the viewport change (second check, CAUGHT at 429, tick 600 at 9.93 s of real time):
+
+![Storm Runner on itch.io in the portrait viewport, CAUGHT at 429, with the browser console open](docs/itch-portrait-view.png)
 
 ---
 
