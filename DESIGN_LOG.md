@@ -20,7 +20,7 @@ See it in the build: steer around everything for 10 s without bursting. The scor
 **DC-02 · controls · Three lanes, one move per input**
 3 fixed lanes; each Left/Right press or swipe moves exactly one lane in a snap, with no drifting in between.
 
-Status: built (swipes not yet tried on a real phone)
+Status: built (swipes and tap-to-restart confirmed on a real phone, 2026-11-20)
 
 Build note
 Built in: `main.gd` _unhandled_input queues one action per key press (echo ignored, so holding moves one lane) or per swipe; step() applies it next tick; _change_lane() snaps.
@@ -160,6 +160,16 @@ See it in the build: get caught, then press any key. A new run starts at once.
 After the viewport change (second check, CAUGHT at 429, tick 600 at 9.93 s of real time):
 
 ![Storm Runner on itch.io in the portrait viewport, CAUGHT at 429, with the browser console open](docs/itch-portrait-view.png)
+
+**Phone check (2026-11-20, live itch.io link in a phone browser):**
+- The game filled the phone screen in portrait.
+- Swipe left and swipe right each changed lane, swipe up burst, and a tap on the CAUGHT screen started a new run.
+- No swipe scrolled the page instead of moving the runner.
+- The run ended CAUGHT at 368.
+
+| Running (score 55, right lane) | Caught (368) |
+|---|---|
+| ![Storm Runner running on a phone](docs/phone-run.jpg) | ![Storm Runner CAUGHT at 368 on a phone](docs/phone-caught.jpg) |
 
 ---
 
